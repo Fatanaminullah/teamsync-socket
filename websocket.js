@@ -11,10 +11,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://b27b-2a09-bac1-3480-18-00-3c3-1e.ngrok-free.app",
-    ],
+    origin: ["http://localhost:5173", "https://teamsync-app.netlify.app/"],
   })
 );
 
@@ -22,7 +19,7 @@ app.use(bodyParser.json());
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "https://b27b-2a09-bac1-3480-18-00-3c3-1e.ngrok-free.app",
+    origin: "https://teamsync-app.netlify.app/",
     // origin: "http://localhost:5173",
     methods: ["GET", "POST"],
   },
