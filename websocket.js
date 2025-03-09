@@ -11,7 +11,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://teamsync-app.netlify.app/"],
+    origin: ["http://localhost:5173", "https://teamsync-app.netlify.app"],
   })
 );
 
@@ -19,8 +19,7 @@ app.use(bodyParser.json());
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "https://teamsync-app.netlify.app/",
-    // origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://teamsync-app.netlify.app"],
     methods: ["GET", "POST"],
   },
 });
